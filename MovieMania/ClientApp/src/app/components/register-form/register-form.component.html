@@ -1,0 +1,26 @@
+<div class="container">
+  <h1>Welcome To Movie Mania Website</h1>
+  <h3 style="margin-top: 5em;">New User</h3>
+  <form [formGroup]="registerForm"
+        (ngSubmit)="onSubmit()">
+    <input class="form-control"
+           type="text"
+           placeholder="First Name"
+           formControlName="firstName" style="margin-top: 1em" />
+    <input class="form-control"
+           type="text"
+           placeholder="Last Name"
+           formControlName="lastName" style="margin-top: 1em" />
+    <input class="form-control"
+           type="text"
+           placeholder="Username"
+           formControlName="username" style="margin-top: 1em" />
+    <input class="form-control"
+           type="password"
+           placeholder="Password"
+           formControlName="password" style="margin-top: 1em" />
+    <button type="submit" class="btn btn-primary" [disabled]="!registerForm.valid" style="margin-top: 1em">
+      Register
+    </button>
+  </form>
+</div>

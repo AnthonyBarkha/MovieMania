@@ -1,0 +1,6 @@
+<h1 style="margin: 1em 0; text-align: center;">Your Profile</h1>
+<div style="margin-bottom:2em;">
+  <a [routerLink]="['/movies']">Go To List Of Movies</a>
+</div>
+<app-profile-list *ngIf="movies" [movies]="movies"></app-profile-list>
+<p *ngIf="!movies">No movies in your profile</p>

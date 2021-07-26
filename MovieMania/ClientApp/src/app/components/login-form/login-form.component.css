@@ -1,0 +1,14 @@
+.container {
+  text-align: center;
+  margin-top: 3em;
+}
+
+
+input.ng-touched.ng-invalid {
+    border: 3px solid red;
+}
+
+.error-msg {
+  color: red;
+  margin-top: 1em;
+}

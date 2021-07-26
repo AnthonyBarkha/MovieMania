@@ -1,0 +1,10 @@
+<div class="card" style="width: 18rem; margin-left: 1em; margin-bottom: 1em; min-height: 43em">
+  <img class="card-img-top" [src]="movie.image" alt="movie">
+  <div class="card-body">
+    <h4 class="card-title">{{movie.title}}</h4>
+    <p class="card-text"><b>Description:</b> {{movie.description}}</p>
+    <p class="card-text"><b>Genre:</b> {{movie.genre}}</p>
+    <star-rating value="{{movie.rating}}" totalstars="5" checkedcolor="gold" uncheckedcolor="gray" size="24px" readonly="false" (rate)="onRate($event, movie.id)"></star-rating>
+    <a class="btn btn-danger" (click)="removeMovie(movie.id)">Remove</a>
+  </div>
+</div>

@@ -1,0 +1,9 @@
+<h1 style="margin: 1em 0; text-align:center">Add Movies To Your Profile!</h1>
+<div>
+  <input type="text" [(ngModel)]="search" placeholder="Search Movies" style="margin-bottom:2em; width: 20em"/>
+</div>
+<div style="margin-bottom:2em;">
+  <a [routerLink]="['/profile']" style="margin-bottom:3em">Go To My Profile</a>
+</div>
+<app-movies-list *ngIf="movies" [movies]="movies | search: search"></app-movies-list>
+<p *ngIf="!movies">No movies to add</p>

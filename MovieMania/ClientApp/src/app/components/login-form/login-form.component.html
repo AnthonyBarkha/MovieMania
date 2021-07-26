@@ -1,0 +1,20 @@
+<div class="container">
+  <h1>Welcome To Movie Mania Website</h1>
+  <h3 style="margin-top: 5em;">User Login</h3>
+  <form [formGroup]="loginForm"
+        (ngSubmit)="onSubmit()">
+    <input class="form-control"
+           type="text"
+           placeholder="Username"
+           formControlName="username" style="margin-top: 1em" />
+    <input class="form-control"
+           type="password"
+           placeholder="Password"
+           formControlName="password" style="margin-top: 1em"/>
+    <button type="submit" class="btn btn-primary" [disabled]="!loginForm.valid" style="margin: 1em 0">
+      Login
+    </button>
+  </form>
+  <a [routerLink]="['/register']">Register here</a>
+  <h4 *ngIf="error" class="error-msg">{{ error }}</h4>
+</div>

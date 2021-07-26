@@ -1,0 +1,9 @@
+<div class="card" style="width: 18rem; margin-left: 1em; margin-bottom: 1em; min-height: 42em" >
+  <img class="card-img-top" [src]="movie.image" alt="movie">
+  <div class="card-body">
+    <h4 class="card-title">{{movie.title}}</h4>
+    <p class="card-text"><b>Description:</b> {{movie.description}}</p>
+    <p class="card-text"><b>Genre:</b> {{movie.genre}}</p>
+    <a class="btn btn-primary" (click)="addToProfile(movie)">Add to profile</a>
+  </div>
+</div>
